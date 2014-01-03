@@ -4,6 +4,8 @@ class SocksController < ApplicationController
   def index
     @sock = Sock.new
     @socks = Sock.all.order('created_at DESC')
+    @found_socks = Sock.where(status:'Found')
+    @lost_socks = Sock.where(status: nil)
   end
 
   def new

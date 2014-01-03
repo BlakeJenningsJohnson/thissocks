@@ -16,8 +16,10 @@
 
 <%= render 'form' %>
 
-<h2>Have you seen these socks?</h2>
-<table>
+<div class='container'>
+  <div id='left'>
+    <h2>Have you seen these socks?</h2>
+    <table>
       <thead>
         <tr>
           <th> Size </th>
@@ -28,20 +30,41 @@
         </tr>
       </thead>
       <tbody> 
-        <% @socks.each do |sock| %>
+        <% @lost_socks.each do |sock| %>
           <tr>
             <td id='size'><%= sock.size %></td>
             <td id='color'><%= sock.color %></td>
             <td id='dm'><%= sock.distinguishing_markings %></td>
-            <% if sock.status == "Found" %>
-            <td id='status_found'>< This sock has been found ></td>
-            <% else %>
             <td id='found_button'><%= button_to "I found it!", 
               mark_found_path(sock.id), :method => :mark_found %>
             </td>
-            <% end %>
           </tr>
-          <% end %>
-        </tbody>
-</table>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 
+  <div id='right'>
+    <h2>These socks have been found!</h2>
+    <table>
+      <thead>
+        <tr>
+          <th> Size </th>
+          <th> Color </th>
+          <th> Distinguishing markings</th>
+          <th> </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody> 
+        <% @found_socks.each do |sock| %>
+          <tr>
+            <td id='size'><%= sock.size %></td>
+            <td id='color'><%= sock.color %></td>
+            <td id='dm'><%= sock.distinguishing_markings %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

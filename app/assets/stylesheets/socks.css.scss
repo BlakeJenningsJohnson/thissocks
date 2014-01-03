@@ -14,4 +14,40 @@
   font-size: 50pt;
   text-align: center;
   height: 90px;
+  padding: none;
+}
+
+label {
+  background-color: blue;
+  height: 90px;
+}
+
+.container {
+  overflow: auto;
+  font-size: 14pt;
+  width: 96%;
+  border: 1px solid red;
+  text-align: center;
+  margin: auto;
+}
+
+#left {
+  border: 1px solid blue;
+  width: 49.9%;
+  float: left;
+}
+
+#right {
+  width: 49.9%;
+  float: right;
+}
+
+table {
+  width: 100%;
+}
+
+h2 {
+  font-size: 18pt;
+  font-variant: small-caps;
+  border-bottom: 5px solid black;
 }
