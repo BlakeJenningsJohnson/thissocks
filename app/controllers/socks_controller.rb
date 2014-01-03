@@ -3,7 +3,7 @@ class SocksController < ApplicationController
 
   def index
     @sock = Sock.new
-    @socks = Sock.all
+    @socks = Sock.all.order('created_at DESC')
   end
 
   def new

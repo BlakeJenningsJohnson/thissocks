@@ -11,10 +11,18 @@
       </ul>
     </div>
   <% end %>
+
   <div class="field">
-    <%= f.label :size %>
-    <%= f.text_field :size %>
+    <%= f.label :size%>
+    <select name="sock[size]">
+      <option value="baby">Baby</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+      <option value="giant">Giant</option>
+    </select>
   </div>
+
   <div class="field">
     <%= f.label :color %>
     <%= f.text_field :color %>
