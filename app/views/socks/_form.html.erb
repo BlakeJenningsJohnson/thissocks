@@ -1,0 +1,28 @@
+<h1>List a missing sock:</h1>
+
+<%= form_for(@sock) do |f| %>
+  <% if @sock.errors.any? %>
+  <div class= "error_messages">
+    <h2> Form is invalid </h2>
+    <ul>
+      <% for message in @sock.errors.full_messages %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :distinguishing_markings %>
+    <%= f.text_field :distinguishing_markings %>
+  </div>
+
+  <div class= "actions"><%=f.submit %></div>
+<% end %>
