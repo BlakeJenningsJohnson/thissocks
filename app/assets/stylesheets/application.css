@@ -12,12 +12,7 @@
  *= require_tree .
  */
 
-html, body {
-  background: url('grainy.jpeg') repeat center fixed; 
-  font-family: 'Franklin Gothic Medium' sans-serif;
-  margin: none;
-  padding: none;
-}
+
 
 p {
   padding: none;

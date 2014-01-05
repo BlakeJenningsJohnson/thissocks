@@ -1,5 +1,12 @@
 // border: 1px solid red;
 
+html, body {
+  background: image-url('grainy.jpeg') repeat center fixed; 
+  font-family: 'Franklin Gothic Medium' sans-serif;
+  margin: none;
+  padding: none;
+}
+
 #notice {
   color: red;
   text-align: center;
