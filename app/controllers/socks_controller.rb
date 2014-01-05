@@ -15,7 +15,7 @@ class SocksController < ApplicationController
     @sock = Sock.find_by(:id => params[:id])
     @sock[:status] = 'Found'
     @sock.save
-    redirect_to "/socks", notice: "AWESOME SOCKS! YOU FOUND IT!"
+    redirect_to "/socks", notice: "AWESOME SOCKS! You found it!"
   end
 
   def create 

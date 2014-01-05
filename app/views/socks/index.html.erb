@@ -18,7 +18,7 @@
 <%= form_tag("/", method: "get") do %>
   <%= label_tag(:query, " ") %>
   <%= text_field_tag(:query) %>
-  <%= submit_tag("Search") %>
+  <%= submit_tag("SEARCH") %>
 <% end %>
 </div>
 
@@ -43,7 +43,7 @@
             <td id='size'><%= sock.size %></td>
             <td id='color'><%= sock.color.downcase %></td>
             <td id='dm'><%= sock.distinguishing_markings.downcase %></td>
-            <td id='found_button'><%= button_to "I found it!", 
+            <td id='found_button'><%= button_to "I FOUND IT!", 
               mark_found_path(sock.id), :method => :mark_found %>
             </td>
           </tr>
