@@ -1,5 +1,4 @@
 <div class="lost_form">
-  <table>
     <%= form_for(@sock) do |f| %>
     <% if @sock.errors.any? %>
     <div class= "error_messages">
@@ -12,11 +11,7 @@
       </div>
     <% end %>
   <h1>REPORT A SOCK MISSING:</h1>
-  <tr>
-    <td>
       <%= f.label :size %>
-    </td>
-    <td>
       <select name="sock[size]">
         <option value="baby">BABY</option>
         <option value="small">SMALL</option>
@@ -24,22 +19,10 @@
         <option value="large">LARGE</option>
         <option value="giant">GIANT</option>
       </select>
-    </td>
-  </tr>
-
-  <tr>
-    <td><%= f.label :color %></td>
-    <td><%= f.text_field :color %></td>
-  </tr>  
-
-  <tr>
-    <td><%= f.label :distinguishing_markings %></td>
-    <td><%= f.text_field :distinguishing_markings %></td>
-  <tr>
-  <tr>
-    <td id='report'><%=f.submit "Report" %></td>
-  </tr>
-  </table>
-    
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+    <%= f.label :distinguishing_markings %>
+    <%= f.text_field :distinguishing_markings %>
+    <td id='report'><%=f.submit "Report" %>    
   <% end %>
 </div>

@@ -10,6 +10,7 @@ Socks::Application.routes.draw do
   # get '/socks/new' => 'socks#index'
   root 'socks#index'
   post '/socks/mark_found/:id', :controller => 'socks', :action => 'mark_found', :as => :mark_found
+  
 
 
   # Example of regular route:

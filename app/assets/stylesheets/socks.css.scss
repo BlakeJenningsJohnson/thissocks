@@ -7,6 +7,20 @@ html, body {
   padding: none;
 }
 
+p {
+  padding: none;
+  margin: none;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  margin-top: 1px;
+  padding-top: 3px;
+  text-align: center;
+  padding-bottom: 0;
+}
+
 #notice {
   color: red;
   text-align: center;
@@ -25,13 +39,31 @@ html, body {
   margin: auto;
 }
 
+h1#searchbar {
+  background-color: #B8020E;
+  font-weight: bold;
+  color: white;
+}
+
+form {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.search {
+  background-color: #B8020E;
+  padding-bottom: 10px;
+  padding-top: 2px;
+}
+
 #title {
   width: 100%;
   font-size: 50pt;
   text-align: center;
   height: 90px;
   padding: none;
-  padding-top: 5px;
+  margin-top: none;
 }
 
 label {
@@ -43,31 +75,31 @@ label {
   overflow: auto;
   font-size: 14pt;
   width: 96%;
-
   text-align: center;
   margin: auto;
 }
 
-
 #left {
-
   border-right: 2px solid black;
   width: 49.8%;
-  min-height: 2000px;
+  height: 500px;
   float: left;
-  background-color: rgba(192,192,192, 0.2);
+  background-color: rgba(192,192,192, 0.5);
+  overflow: scroll;
 }
 
 #right {
   width: 49.8%;
   float: right;
+  height: 500px;
+  overflow: scroll;
 }
 
 .lost_form {
   text-align: center;
-  color: white;
-  font-weight: heavy;
   background-color: black;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .lost_form td {
@@ -103,4 +135,9 @@ h2 {
   font-variant: small-caps;
   border-bottom: 5px solid black;
   text-align: center;
+}
+
+#footer {
+  height: 20px;
+  background-color: black;
 }

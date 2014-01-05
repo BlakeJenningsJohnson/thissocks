@@ -3,9 +3,8 @@ class SocksController < ApplicationController
 
   def index
     @sock = Sock.new
-    @socks = Sock.all.order('created_at DESC')
-    @found_socks = Sock.where(status:'Found')
-    @lost_socks = Sock.where(status: nil)
+    @found_socks = Sock.search(params[:query]).found
+    @lost_socks = Sock.search(params[:query]).lost
   end
 
   def new
@@ -25,13 +24,8 @@ class SocksController < ApplicationController
       flash[:notice] = "We're sorry to hear about your loss. That socks."
       redirect_to "/socks"
     else
-      redirect_to "/socks", notice: "There was an error, try again."
+      redirect_to "/socks", notice: "There was an error. Try again."
     end
-  end
-
-  def show
-    @sock = Sock.new
-    @socks = Sock.all
   end
 
   private
