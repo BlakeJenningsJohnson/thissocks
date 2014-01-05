@@ -13,7 +13,7 @@
  */
 
 html, body {
-  background: white url('grainy.jpeg') repeat center center fixed; 
+  background: white url('grainy.jpeg') repeat center fixed; 
   font-family: 'Franklin Gothic Medium' sans-serif;
   margin: none;
   padding: none;
