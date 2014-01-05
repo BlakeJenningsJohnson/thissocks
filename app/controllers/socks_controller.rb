@@ -22,7 +22,7 @@ class SocksController < ApplicationController
   def create 
     @sock = Sock.new(sock_params)
     if @sock.save
-      flash[:notice] = "We're sorry to hear about your sock."
+      flash[:notice] = "We're sorry to hear about your loss. That socks."
       redirect_to "/socks"
     else
       redirect_to "/socks", notice: "There was an error, try again."

@@ -1,40 +1,45 @@
-<table>
-  <%= form_for(@sock) do |f| %>
-  <% if @sock.errors.any? %>
-  <div class= "error_messages">
-    <h2> Form is invalid </h2>
-    <ul>
-      <% for message in @sock.errors.full_messages %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+<div class="lost_form">
+  <table>
+    <%= form_for(@sock) do |f| %>
+    <% if @sock.errors.any? %>
+    <div class= "error_messages">
+      <h2> Form is invalid </h2>
+      <ul>
+        <% for message in @sock.errors.full_messages %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <h1>REPORT A SOCK MISSING:</h1>
+  <tr>
+    <td>
+      <%= f.label :size %>
+    </td>
+    <td>
+      <select name="sock[size]">
+        <option value="baby">BABY</option>
+        <option value="small">SMALL</option>
+        <option value="medium">MEDIUM</option>
+        <option value="large">LARGE</option>
+        <option value="giant">GIANT</option>
+      </select>
+    </td>
+  </tr>
+
+  <tr>
+    <td><%= f.label :color %></td>
+    <td><%= f.text_field :color %></td>
+  </tr>  
+
+  <tr>
+    <td><%= f.label :distinguishing_markings %></td>
+    <td><%= f.text_field :distinguishing_markings %></td>
+  <tr>
+  <tr>
+    <td id='report'><%=f.submit "Report" %></td>
+  </tr>
+  </table>
+    
   <% end %>
-<h1>List a missing sock:</h1>
-<tr>
-  <td>
-    <%= f.label :size %>
-  </td>
-  <td>
-    <select name="sock[size]">
-      <option value="baby">Baby</option>
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">Large</option>
-      <option value="giant">Giant</option>
-    </select>
-  </td>
-</tr>
-
-<tr>
-  <td><%= f.label :color %></td>
-  <td><%= f.text_field :color %></td>
-</tr>  
-
-<tr>
-  <td><%= f.label :distinguishing_markings %></td>
-  <td><%= f.text_field :distinguishing_markings %></td>
-<tr>
-</table>
-  <div class= "actions"><%=f.submit %></div>
-<% end %>
+</div>

@@ -1,4 +1,4 @@
-<h1 id='title'>MISSING</h1>
+<h1 id='title'>THIS SOCKS: MISSING</h1>
 
 <div class='why'>
 <p>
@@ -32,8 +32,8 @@
         <% @lost_socks.each do |sock| %>
           <tr>
             <td id='size'><%= sock.size %></td>
-            <td id='color'><%= sock.color %></td>
-            <td id='dm'><%= sock.distinguishing_markings %></td>
+            <td id='color'><%= sock.color.downcase %></td>
+            <td id='dm'><%= sock.distinguishing_markings.downcase %></td>
             <td id='found_button'><%= button_to "I found it!", 
               mark_found_path(sock.id), :method => :mark_found %>
             </td>

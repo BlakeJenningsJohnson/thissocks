@@ -13,6 +13,7 @@
  */
 
 html, body {
+  background: white url('grainy.jpeg') repeat center center fixed; 
   font-family: 'Franklin Gothic Medium' sans-serif;
   margin: none;
   padding: none;
@@ -23,13 +24,9 @@ p {
   margin: none;
 }
 
-td {
-  padding: 10px;
-  text-align: center;
-}
-
 h1 {
   background-color: black;
-  padding-top: 10px;
   color: white;
+  margin-top: none;
+  text-align: center;
 }

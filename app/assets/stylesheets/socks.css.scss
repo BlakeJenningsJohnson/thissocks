@@ -1,9 +1,18 @@
 // border: 1px solid red;
 
+#notice {
+  color: red;
+  text-align: center;
+  font-size: 30pt;
+  font-style: italic;
+  font-family: 'Brush Script MT';
+  letter-spacing: 0.0625em;
+}
+
 .why {
   text-align: center;
   font-variant: small-caps;
-  font-size: 15pt;
+  font-size: 18pt;
   padding: 5px;
   width: 70%;
   margin: auto;
@@ -15,10 +24,11 @@
   text-align: center;
   height: 90px;
   padding: none;
+  padding-top: 5px;
 }
 
 label {
-  background-color: blue;
+  font-size: 20px;
   height: 90px;
 }
 
@@ -26,16 +36,19 @@ label {
   overflow: auto;
   font-size: 14pt;
   width: 96%;
-  border: 1px solid red;
+
   text-align: center;
   margin: auto;
 }
 
+
 #left {
-  border: 1px solid blue;
+
   border-right: 2px solid black;
   width: 49.5%;
+  min-height: 2000px;
   float: left;
+  background-color: rgba(192,192,192, 0.2);
 }
 
 #right {
@@ -43,12 +56,44 @@ label {
   float: right;
 }
 
+.lost_form {
+  text-align: center;
+  color: white;
+  font-weight: heavy;
+  background-color: black;
+}
+
+.lost_form td {
+  padding: none;
+  text-align: right;
+  margin: none;
+}
+
+input[type="submit"] {
+  -webkit-appearance: push-button;
+  white-space: pre;
+  color: red;
+  position: center;
+  font-weight: bold;
+}
+
+th {
+  border-bottom: 2px dashed red;
+}
+
 table {
   width: 100%;
+}
+
+td {
+  padding: 5px;
+  text-align: center;
+  font-variant: small-caps;
 }
 
 h2 {
   font-size: 18pt;
   font-variant: small-caps;
   border-bottom: 5px solid black;
+  text-align: center;
 }
