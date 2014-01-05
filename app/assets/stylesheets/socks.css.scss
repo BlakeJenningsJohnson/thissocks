@@ -2,7 +2,7 @@
 
 .why {
   text-align: center;
-  font-style: italic;
+  font-variant: small-caps;
   font-size: 15pt;
   padding: 5px;
   width: 70%;
@@ -33,12 +33,13 @@ label {
 
 #left {
   border: 1px solid blue;
-  width: 49.9%;
+  border-right: 2px solid black;
+  width: 49.5%;
   float: left;
 }
 
 #right {
-  width: 49.9%;
+  width: 49.5%;
   float: right;
 }
 

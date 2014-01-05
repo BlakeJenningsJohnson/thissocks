@@ -1,4 +1,4 @@
 class Sock < ActiveRecord::Base
-  validates :size, presence: true, uniqueness: { case_sensitive: false }
-  validates :color, presence: true, numericality: { greater_than: 0 }
+  validates :size, presence: true
+  validates :color, presence: true
 end

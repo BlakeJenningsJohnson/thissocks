@@ -13,8 +13,7 @@
  */
 
 html, body {
-  font-family: 'Trebuchet';
-  font-style: italic;
+  font-family: 'Franklin Gothic Medium' sans-serif;
   margin: none;
   padding: none;
 }
@@ -23,16 +22,14 @@ p {
   padding: none;
   margin: none;
 }
+
 td {
   padding: 10px;
   text-align: center;
 }
 
-td#size {
-  background-color: red;
-}
-
 h1 {
-  background-color: gray;
-  padding: none;
+  background-color: black;
+  padding-top: 10px;
+  color: white;
 }
