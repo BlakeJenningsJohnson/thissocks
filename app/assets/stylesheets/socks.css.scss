@@ -37,18 +37,21 @@ h1 {
   padding: 5px;
   width: 70%;
   margin: auto;
+  font-weight: bold;
 }
 
 h1#searchbar {
   background-color: #B8020E;
   font-weight: bold;
   color: white;
+  padding-top: 10px;
 }
 
 form {
   color: white;
   font-weight: bold;
   text-align: center;
+  letter-spacing: 0.08em;
 }
 
 .search {
@@ -63,6 +66,7 @@ form {
   text-align: center;
   height: 90px;
   padding: 0;
+  padding-top: 10px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -110,6 +114,17 @@ input[type="submit"] {
   color: #B8020E;
   position: center;
   font-weight: bold;
+  border: 0px;
+  height: 27px;
+}
+
+button {
+
+}
+
+input[type="text"] {
+  height: 20px;
+  width: 200px;
 }
 
 th {

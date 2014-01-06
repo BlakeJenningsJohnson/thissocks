@@ -11,7 +11,7 @@
       </div>
     <% end %>
   <h1>REPORT A MISSING SOCK:</h1>
-      <%= f.label :size %>
+      <%= f.label :size, "Size:" %>
       <select name="sock[size]">
         <option value="baby">BABY</option>
         <option value="small">SMALL</option>
@@ -19,10 +19,10 @@
         <option value="large">LARGE</option>
         <option value="giant">GIANT</option>
       </select>
-    <%= f.label :color %>
+    <%= f.label :color, "Color:"%>
     <%= f.text_field :color %>
-    <%= f.label :distinguishing_markings %>
+    <%= f.label :distinguishing_markings, "Distinguishing Markings:" %>
     <%= f.text_field :distinguishing_markings %>
-    <td id='report'><%=f.submit "Report" %>    
+    <td id='report'><%=f.submit "REPORT" %>    
   <% end %>
 </div>
