@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102003122) do
+ActiveRecord::Schema.define(version: 20140113230145) do
 
   create_table "socks", force: true do |t|
     t.datetime "created_at"
@@ -20,6 +20,19 @@ ActiveRecord::Schema.define(version: 20140102003122) do
     t.string   "color"
     t.string   "distinguishing_markings"
     t.string   "status"
+  end
+
+  create_table "visitors", force: true do |t|
+    t.string   "ip_address"
+    t.integer  "page_visits",     default: 0
+    t.datetime "last_visit"
+    t.boolean  "mobile"
+    t.string   "http_user_agent"
+    t.integer  "socks_found"
+    t.integer  "socks_lost"
+    t.integer  "session_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -8,9 +8,18 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+end
+
+group :test, :development do
+  gem 'rspec-rails'
 end
 
 # Use SCSS for stylesheets
