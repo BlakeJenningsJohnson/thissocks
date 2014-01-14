@@ -1,3 +1,26 @@
 // Place all the styles related to the visitors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {text-align:center;}
+
+table.visitors {
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-left: auto; 
+  margin-right: auto;
+  width: 50%;
+}
+
+table.visitors th {
+  border-right: 1px solid black;
+  max-width: 20px;
+}
+
+table.visitors td {
+  background-color: gray;
+}
+
+table.visitors td {
+  height: 100px;
+}
