@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  before_action :update_visitor_count
 
   def current_visitor
     @current_visitor ||= 
@@ -10,7 +11,7 @@ class ApplicationController < ActionController::Base
       else
         visitor = Visitor.create(
           ip_address: request.remote_ip, 
-          http_user_agent: request.http_user_agent,
+          http_user_agent: request.user_agent,
           mobile: on_a_phone?
           )
         session[:visitor_id] = visitor.id
@@ -21,6 +22,10 @@ class ApplicationController < ActionController::Base
   def on_a_phone?
     request.user_agent.downcase.include?('mobile')
   end
+
+  def update_visitor_count
+    current_visitor.update(page_visits: current_visitor.page_visits + 1, last_visit: Time.now)
+  end 
 
   helper_method :current_visitor
   helper_method :on_a_phone?

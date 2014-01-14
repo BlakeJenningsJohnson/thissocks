@@ -1,0 +1,26 @@
+<h2>VISITORS AND ALL THEIR PRIVATE INFO EXCEPT ABOUT THEIR FIRST BORN:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th> Visitors who "don't care for it," or say "it's fine" </th>
+          <th> Visitors who see the value in this mission: </th>
+          <th> Phone Addicts: </th>
+          <th> Old-timey Computer Folks: </th>
+          <th> Total Visitors: </th>
+          <th> BLANK </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody> 
+          <tr>
+            <td id='one-time'><%= Visitor.single_time_visitor %></td>
+            <td id='return'><%= Visitor.return_visitors %></td>
+            <td id='mobile'><%= Visitor.mobile_users %></td>
+            <td id='no-mobile'><%= Visitor.non_mobile_users %></td>
+            <td id='total'><%= Visitor.total_visitors %></td>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
