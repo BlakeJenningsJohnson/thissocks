@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113230145) do
+ActiveRecord::Schema.define(version: 20140116192301) do
 
   create_table "socks", force: true do |t|
     t.datetime "created_at"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140113230145) do
     t.integer  "session_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cookies"
   end
 
 end
