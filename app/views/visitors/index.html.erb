@@ -6,19 +6,24 @@
           <th> Visitors who see the value in this mission: </th>
           <th> Phone Addicts: </th>
           <th> Old-timey Computer Folks: </th>
-          <th> Total Page Visits Essentially By Blake: </th>
+          <th> Total Page Views Essentially By Blake: </th>
+          <th> Visitors Who Are Not the Same Human as Each Other</th>
         </tr>
       </thead>
       <tbody> 
           <tr>
-            <td id='one-time'><%= Visitor.single_time_visitor %></td>
-            <td id='return'><%= Visitor.return_visitors %></td>
+            <td id='onetime'><%= Visitor.single_time_visitor %></td>
+            <td id='returners'><%= Visitor.return_visitors %></td>
             <td id='mobile'><%= Visitor.mobile_users %></td>
             <td id='no-mobile'><%= Visitor.non_mobile_users %></td>
-            <td id='total'><%= Visitor.total_visitors %></td>
+            <td id='total'><%= Visitor.page_views %></td>
+            <td id='totalunique'><%= Visitor.total_visitors.count %></td>
             </td>
           </tr>
       </tbody>
     </table>
+    <canvas id="cvs" width="300" height="300" >
+    Canvas Not supported
+    </canvas>
   </div>
 

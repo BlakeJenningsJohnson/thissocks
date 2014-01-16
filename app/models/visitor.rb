@@ -19,7 +19,11 @@ class Visitor < ActiveRecord::Base
     where(mobile: false).count
   end
 
-  def self.total_visitors
+  def self.page_views
     sum(:page_visits)
+  end
+
+  def self.total_visitors
+    all
   end
 end
