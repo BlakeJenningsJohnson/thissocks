@@ -4,7 +4,8 @@
     var cvs = document.querySelector( "#bargraph" ),
       // Get context
       ctx = cvs.getContext( '2d' );
-    var drawBarRect = function( rectHeight, color, xCoord ) {
+    var drawBarRect = function( rectPercent, color, xCoord ) {
+    var rectHeight = rectPercent * 0.9 * ctx.canvas.height;
     var origin = {
       x: xCoord,
       y: ctx.canvas.height
@@ -25,16 +26,21 @@
              dimensions.height);
     ctx.stroke();
     ctx.fill();
+    ctx.strokeStyle = 'white';
+    ctx.fillStyle = 'white';
+    ctx.font = '18pt Comic Sans'
+    ctx.fillText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight/2 );
+    ctx.strokeText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight/2 );
   };
 
 var mobileUsers = parseInt( document.querySelector("#mobile").innerHTML, 10 );
 var nonMobileUsers = parseInt( document.querySelector("#no-mobile").innerHTML, 10 );
 var totalUsers = mobileUsers + nonMobileUsers;
 
-var mobileHeight = mobileUsers/totalUsers * 0.9 * ctx.canvas.height;
-var nonMobileHeight = nonMobileUsers/totalUsers * 0.9 * ctx.canvas.height;
+var mobilePercent = mobileUsers/totalUsers;
+var nonMobilePercent = nonMobileUsers/totalUsers;
 
-  drawBarRect( mobileHeight, '#B8020E', 75);
-  drawBarRect( nonMobileHeight, 'black', 175);
+  drawBarRect( mobilePercent, '#B8020E', 75);
+  drawBarRect( nonMobilePercent, 'black', 175);
   });
 })();
