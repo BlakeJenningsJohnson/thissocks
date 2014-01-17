@@ -29,8 +29,9 @@
     ctx.strokeStyle = 'black';
     ctx.fillStyle = 'black';
     ctx.font = '18pt Comic Sans';
-    ctx.fillText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight - 5 );
-    ctx.strokeText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight - 5 );
+    var percentText = Math.round(rectPercent * 100) + "%"
+    ctx.fillText( percentText, xCoord + 5, ctx.canvas.height -rectHeight - 5 );
+    ctx.strokeText( percentText, xCoord + 5, ctx.canvas.height -rectHeight - 5 );
   };
 
 var mobileUsers = parseInt( document.querySelector("#mobile").innerHTML, 10 );
