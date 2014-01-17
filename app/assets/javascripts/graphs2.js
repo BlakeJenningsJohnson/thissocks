@@ -28,7 +28,7 @@
     ctx.fill();
     ctx.strokeStyle = 'white';
     ctx.fillStyle = 'white';
-    ctx.font = '18pt Comic Sans'
+    ctx.font = '18pt Comic Sans';
     ctx.fillText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight/2 );
     ctx.strokeText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight/2 );
   };
