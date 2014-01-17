@@ -5,7 +5,7 @@
       // Get context
       ctx = cvs.getContext( '2d' );
     var drawBarRect = function( rectPercent, color, xCoord ) {
-    var rectHeight = rectPercent * 0.9 * ctx.canvas.height;
+    var rectHeight = rectPercent * 0.8 * ctx.canvas.height;
     var origin = {
       x: xCoord,
       y: ctx.canvas.height
@@ -26,11 +26,11 @@
              dimensions.height);
     ctx.stroke();
     ctx.fill();
-    ctx.strokeStyle = 'white';
-    ctx.fillStyle = 'white';
+    ctx.strokeStyle = 'black';
+    ctx.fillStyle = 'black';
     ctx.font = '18pt Comic Sans';
-    ctx.fillText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight/2 );
-    ctx.strokeText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight/2 );
+    ctx.fillText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight - 5 );
+    ctx.strokeText( rectPercent * 100 + "%", xCoord + 5, ctx.canvas.height -rectHeight - 5 );
   };
 
 var mobileUsers = parseInt( document.querySelector("#mobile").innerHTML, 10 );
